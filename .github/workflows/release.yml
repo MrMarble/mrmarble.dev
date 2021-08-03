@@ -22,6 +22,8 @@ jobs:
       - name: Run tests
         run: yarn test
       - name: Deploy Storybook
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn deploy-storybook --ci
       - name: Release
         env:
