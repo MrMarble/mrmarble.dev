@@ -20,6 +20,7 @@
 *.pem
 .eslintcache
 .out
+storybook-static
 
 # debug
 npm-debug.log*
