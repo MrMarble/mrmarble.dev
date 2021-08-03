@@ -24,10 +24,12 @@
   body {
     @apply font-body;
     @apply bg-gray-50;
+    @apply text-gray-800;
     animation: lighten 0.3s;
   }
   body.dark {
     @apply bg-gray-900;
+    @apply text-gray-300;
     animation: darken 0.3s;
   }
 }
