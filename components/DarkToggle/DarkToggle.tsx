@@ -1,17 +1,16 @@
-import "./DarkToggle.css";
-
 import type { Properties, Property } from "csstype";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+
+import styles from "./DarkToggle.module.css";
 
 export interface DarkToggleProps {
   size?: Property.Width;
   initiallyChecked?: boolean;
 }
 
-export const DarkToggle: React.FC<DarkToggleProps> = ({
-  size = "1rem",
-  initiallyChecked = false,
-}) => {
+export const DarkToggle: React.FC<
+  DarkToggleProps & React.HTMLAttributes<HTMLInputElement>
+> = ({ size = "1rem", initiallyChecked = false, className, ...rest }) => {
   const [checked, setChecked] = useState(initiallyChecked);
 
   const onSelectMode = (checked: boolean) => {
@@ -46,10 +45,11 @@ export const DarkToggle: React.FC<DarkToggleProps> = ({
   return (
     <input
       type="checkbox"
-      className="dark-toggle"
+      className={styles.darktoggle + (className ? " " + className : "")}
       style={style}
       onChange={onChange}
       checked={checked}
+      {...rest}
     />
   );
 };

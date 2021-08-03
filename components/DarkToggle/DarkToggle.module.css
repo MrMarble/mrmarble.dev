@@ -1,6 +1,6 @@
 @layer components {
-  .dark-toggle {
-    @apply text-gray-900 dark:text-gray-300;
+  .darktoggle {
+    @apply text-gray-400 dark:text-gray-700;
     cursor: pointer;
     appearance: none;
     outline: none;
@@ -11,7 +11,7 @@
     transition: all 500ms;
   }
 
-  .dark-toggle:checked {
+  .darktoggle:checked {
     --ray-size: calc(var(--size) * -0.4);
     --offset-orthogonal: calc(var(--size) * 0.65);
     --offset-diagonal: calc(var(--size) * 0.45);
