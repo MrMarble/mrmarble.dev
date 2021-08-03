@@ -13,4 +13,9 @@ module.exports = {
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
+  moduleNameMapper: {
+    "\\.(css|scss)$": "identity-obj-proxy",
+  },
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["./jest.setup.js"],
 };
