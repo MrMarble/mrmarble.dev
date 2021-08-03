@@ -45,6 +45,7 @@ export const DarkToggle: React.FC<
   return (
     <input
       type="checkbox"
+      title="Dark Mode Toggle"
       className={styles.darktoggle + (className ? " " + className : "")}
       style={style}
       onChange={onChange}
