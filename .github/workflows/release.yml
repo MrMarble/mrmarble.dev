@@ -21,6 +21,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run tests
         run: yarn test
+      - name: Deploy Storybook
+        run: yarn deploy-storybook --ci
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
