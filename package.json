@@ -52,5 +52,10 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "storybook-deployer": {
+    "gitUsername": "Alvaro Tinoco",
+    "gitEmail": "alvarotinocomarmol@gmail.com",
+    "commitMessage": "Deploy Storybook to Github Pages [skip ci]"
   }
 }
