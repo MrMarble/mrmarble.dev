@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  @keyframes darken {
+    from {
+      @apply bg-gray-50;
+    }
+    to {
+      @apply bg-gray-900;
+    }
+  }
+
+  @keyframes lighten {
+    from {
+      @apply bg-gray-900;
+    }
+    to {
+      @apply bg-gray-50;
+    }
+  }
+
   body {
     @apply font-body;
+    @apply bg-gray-50;
+    animation: lighten 0.3s;
+  }
+  body.dark {
+    @apply bg-gray-900;
+    animation: darken 0.3s;
   }
 }
